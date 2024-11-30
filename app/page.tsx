@@ -1,45 +1,32 @@
-import { Button } from "@/components/ui/button";
-import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuList } from "@/components/ui/navigation-menu";
-import Link from "next/link";
+import React from 'react';
+// import { useQuery } from 'react-query';
+import axios from '../helpers/Axios';
 
+// const fetchData = async () => {
+//   const { data } = await axios.get('/data');
+//   return data;
+// };
 
-export default function Home() {
+const Home = () => {
+  // const { data, error, isLoading } = useQuery('fetchData', fetchData);
+
+  // if (isLoading) return <div className="text-center mt-10">Loading...</div>;
+  // if (error) return <div className="text-center mt-10 text-red-500">Error: {error.message}</div>;
+
   return (
-  <>
-
-  <NavigationMenu className="bg-stone-100 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 relative flex h-16 items-center justify-center">
-    <NavigationMenuList className="flex justify-center space-x-20">
-      <NavigationMenuItem>
-        <Link href="#" >
-          <NavigationMenuLink>
-            <Button className="bg-transparent hover:bg-red-800 text-red-800 font-semibold hover:text-white py-2 px-4 border border-red-800 hover:border-transparent rounded">Home</Button>
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link href="#" >
-          <NavigationMenuLink>
-            <Button className="bg-transparent hover:bg-red-800 text-red-800 font-semibold hover:text-white py-2 px-4 border border-red-800 hover:border-transparent rounded">Products</Button>
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-      <NavigationMenuItem>
-        <Link href="/login">
-          <NavigationMenuLink>
-            <Button className="bg-transparent hover:bg-red-800 text-red-800 font-semibold hover:text-white py-2 px-4 border border-red-800 hover:border-transparent rounded">Login</Button>
-          </NavigationMenuLink>
-        </Link>
-      </NavigationMenuItem>
-    </NavigationMenuList>
-  </NavigationMenu>
-
-
-
-
-
-
-
-
-  </>
+    <div className="container mx-auto p-4">
+      <h1 className="text-3xl font-bold mb-4">Furniture Shop</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {/* {data.map(item => ( */}
+          <div key={0} className="border p-4 rounded shadow">
+            <h2 className="text-xl font-bold">aya</h2>
+            <p>ayayayayyayayayayay</p>
+            <p className="text-gray-700">15</p>
+          </div>
+        {/* ))} */}
+      </div>
+    </div>
   );
-}
+};
+
+export default Home;
